@@ -1,0 +1,10 @@
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  .btn-container {
+    margin: 14px 4px; 
+    flex: 1 1 100%
+  }
+}
+
+

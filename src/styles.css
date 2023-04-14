@@ -1,0 +1,57 @@
+/* Add application styles & imports to this file! */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+body app-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 22px;
+}
+
+mat-card {
+  width: 84%;
+  max-width: 950px;
+  margin: 44px auto;
+  padding: 0 16px !important;
+}
+
+mat-form-field {
+  width: 100%;
+  margin: 5px;
+}
+
+mat-card-title {
+  padding: 22px 9px;
+}
+
+mat-card-content {
+  height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  body app-root {
+    align-items: flex-start;
+    margin: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media screen and (min-width: 992px) {
+}

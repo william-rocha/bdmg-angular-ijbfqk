@@ -1,0 +1,83 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Endereço</mat-card-title>
+    <form [formGroup]="form" class="address-form">
+      <div class="form-container">
+        <form-field
+          label="CEP"
+          formControlName="cep"
+          [control]="form.controls['cep']"
+          [mask]="cepMask"
+        ></form-field>
+
+        <form-field
+          label="Rua"
+          formControlName="logradouro"
+          [control]="form.controls['logradouro']"
+          [col]="2"
+        ></form-field>
+
+        <number-field
+          label="Número"
+          formControlName="complemento"
+          [control]="form.controls['complemento']"
+        ></number-field>
+
+        <form-field
+          label="Bairro"
+          formControlName="bairro"
+          [control]="form.controls['bairro']"
+        ></form-field>
+
+        <form-field
+          label="Cidade"
+          formControlName="localidade"
+          [control]="form.controls['localidade']"
+        ></form-field>
+
+        <form-field
+          label="Estado"
+          formControlName="uf"
+          [control]="form.controls['uf']"
+        ></form-field>
+
+        <form-field
+          label="GIA"
+          formControlName="gia"
+          [control]="form.controls['gia']"
+        ></form-field>
+
+        <form-field
+          label="DDD"
+          formControlName="ddd"
+          [control]="form.controls['ddd']"
+        ></form-field>
+
+        <form-field
+          label="IBGE"
+          formControlName="ibge"
+          [control]="form.controls['ibge']"
+          [isReadOnly]="true"
+        ></form-field>
+
+        <form-field
+          label="SIAFI"
+          formControlName="siafi"
+          [control]="form.controls['siafi']"
+          [isReadOnly]="true"
+        ></form-field>
+
+        <mat-card-actions align="end" class="btn-container">
+          <button
+            mat-button
+            mat-raised-button
+            color="primary"
+            (click)="saveChanges()"
+          >
+            Salvar
+          </button>
+        </mat-card-actions>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

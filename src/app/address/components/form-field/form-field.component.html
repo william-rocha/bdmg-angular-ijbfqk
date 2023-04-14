@@ -1,0 +1,22 @@
+<mat-form-field
+  appearance="fill"
+  floatLabel="always"
+  class="custom-input"
+  [hideRequiredMarker]="false"
+>
+  <mat-label [attr.for]="id">{{ label }}</mat-label>
+  <input
+    class="form-control"
+    matInput
+    [id]="id"
+    [type]="type"
+    [readonly]="!!isReadOnly"
+    [required]="required"
+    [(ngModel)]="value"
+    [textMask]="mask.length ? { mask: mask, guide: true } : { mask: false }"
+    [formControl]="control"
+  />
+  <mat-error *ngIf="errorMessage != null">
+    {{ errorMessage }}
+  </mat-error>
+</mat-form-field>
